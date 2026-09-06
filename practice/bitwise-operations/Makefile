@@ -1,11 +1,11 @@
 CXX=g++
-CXXFLAGS=-Wall -Wextra -std=c++17
+CXXFLAGS=-Wall -Wextra -std=c++17 -Iinclude
 
-test: CustomBitset.cpp test.cpp
-	$(CXX) $(CXXFLAGS) CustomBitset.cpp test.cpp -o test
+test: src/CustomBitset.cpp tests/test.cpp 
+	$(CXX) $(CXXFLAGS) src/CustomBitset.cpp tests/test.cpp -o build/test
 
 run: test
-	./test
+	./build/test
 
 clean:	
-	rm -f test
+	rm -f build/test
