@@ -58,6 +58,11 @@ int CustomBitset::find_earliest_set(int bit_no) const {
     check_valid_bit_index(bit_no, bitset_size);
     int index = bit_no;
     int bit_no_win_char = bit_no % 8;
+    if (bit_no_win_char < 7) {
+        for (int i = bit_no_win_char; i <= 7; i++) {
+            
+        }
+    }
     return 0;
 }
 
