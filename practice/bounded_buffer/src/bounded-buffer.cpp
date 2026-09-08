@@ -1,11 +1,7 @@
 #include "bounded-buffer.h"
 #include <vector>
+#include <semaphore>
 
-template <typename T>
-BoundedBuffer<T>::BoundedBuffer(int size) {
-    buffer = vector<T>(size);
-    this -> size = size;
-}
 
 template <typename T>
 T BoundedBuffer<T>::pop() {
